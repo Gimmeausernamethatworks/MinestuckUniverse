@@ -72,9 +72,363 @@ public class MSUAlchemyRecipes
         if(MinestuckUniverse.isMysticalWorldLoaded) registerMysticalWorldRecipes();
         if(MinestuckUniverse.isBOPLoaded) registerBOPRecipes();
         if(MinestuckUniverse.isFutureMcLoaded) registerFutureMcRecipes();
-
         if(MinestuckUniverse.isMekanismLoaded)
+	    {
             GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "ingot")), 1, 1), true, new GristSet(new GristType[] {Mercury, Rust}, new int[] {8, 12}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "oreblock")), 1, 0), true, new GristSet(new GristType[] {Build, Mercury, Rust}, new int[] {4, 8*oreMultiplier, 12*oreMultiplier}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "enrichedalloy"))), false, new GristSet(new GristType[] {Rust, Garnet}, new int[] {9, 4}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "reinforcedalloy"))), false, new GristSet(new GristType[] {Rust, Garnet, Diamond}, new int[] {9, 4, 18}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "atomicalloy"))), false, new GristSet(new GristType[] {Build, Cobalt, Tar, Diamond, Garnet, Rust}, new int[] {2, 2, 8, 36, 4, 9}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "otherdust")), 1, 6), true, new GristSet(new GristType[] {Build, Cobalt, Tar}, new int[] {2, 2, 8}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "otherdust")), 1, 5), true, new GristSet(new GristType[] {Build, Cobalt, Tar, Diamond}, new int[] {2, 2, 8, 18}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "otherdust")), 1, 4), true, new GristSet(new GristType[] {Sulfur, Chalk, Tar}, new int[] {2, 2, 2}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "otherdust")), 1, 3), true, new GristSet(new GristType[] {Sulfur,}, new int[] {8}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "otherdust")), 1, 1), true, new GristSet(new GristType[] {Tar, Rust}, new int[] {16, 9}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "otherdust")), 1, 0), true, new GristSet(new GristType[] {Diamond}, new int[] {18}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "ingot")), 1, 0), true, new GristSet(new GristType[] {Mercury, Rust, Build, Cobalt, Tar, Diamond}, new int[] {8, 12, 2, 2, 8, 18}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "ingot")), 1, 2), true, new GristSet(new GristType[] {Cobalt, Caulk, Rust}, new int[] {2, 6, 15}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "ingot")), 1, 3), true, new GristSet(new GristType[] {Mercury, Rust, Chalk, Tar}, new int[] {8, 12, 6, 4}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "ingot")), 1, 4), true, new GristSet(new GristType[] {Tar, Rust}, new int[] {16, 9}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "controlcircuit")), 1, 0), true, new GristSet(new GristType[] {Mercury, Rust, Garnet}, new int[] {8, 12, 4});
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "compressedcarbon"))), false, new GristSet(new GristType[] {Tar}, new int[] {8}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "compressedredstone"))), false, new GristSet(new GristType[] {Garnet}, new int[] {4}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "compresseddiamond"))), false, new GristSet(new GristType[] {Diamond}, new int[] {18}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "compressedobsidian"))), false new GristSet(new GristType[] {Build, Cobalt, Tar, Diamond}, new int[] {2, 2, 8, 18}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "salt"))), false new GristSet(new GristType[] {Chalk}, new int[] {2}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "dust")), 1, 0), true new GristSet(new GristType[] {Rust}, new int[] {9}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "dust")), 1, 1), true new GristSet(new GristType[] {Gold}, new int[] {9})
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "dust")), 1, 2), true new GristSet(new GristType[] {Mercury, Rust}, new int[] {8, 12}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "dust")), 1, 3), true new GristSet(new GristType[] {Cobalt, Rust}, new int[] {3, 16}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "dust")), 1, 4), true new GristSet(new GristType[] {Caulk, Rust}, new int[] {8, 12}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "dust")), 1, 5), true new GristSet(new GristType[] {Mercury, Rust}, new int[] {8, 12}));
+	        GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mekanism", "dust")), 1, 6), true new GristSet(new GristType[] {Cobalt, Rust, Shale}, new int[] {4, 12, 4}));
+	    
+	}
+    if(MinestuckUniverse.isAetherLoaded)
+	{
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "holystone"))), false, new GristSet(new GristType[] {Build}, new int[] {2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "mossy_holystone"))), false new GristSet(new GristType[] {Build, Amber}, new int[] {4, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "aether_log")), 1, 0), true, new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "aether_log")), 1, 1), true, new GristSet(new GristType[] {Build, Amber}, new int [] {8, 4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "aether_leaves")), 1, 0), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "aether_leaves")), 1, 1), true new GristSet(new GristType[] {Build, Amber}, new int[] {1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "crystal_leaves"))), false new GristSet(new GristType[] {Build, Cobalt}, new int[] {1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "holiday_leaves"))), false new GristSet(new GristType[] {Build, Shale}, new int[] {1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "quicksoil"))), false new GristSet(new GristType[] {Build, Mercury}, new int[] {1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "quicksoil_glass"))), false new GristSet(new GristType[] {Build, Mercury, Amber, Gold}, new int[] {1, 1, 8, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "aether_dirt"))), false new GristSet(new GristType[] {Build}, new int[] {2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "aether_grass"))), false new GristSet(new GristType[] {Build}, new int[] {2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "enchanted_aether_grass"))), false new GristSet(new gristType[] {Build, Amber, Gold}, new int[] {2, 8, 2})
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "icestone"))), false new GristSet (new GristType[] {Build, Cobalt}, new int[] {2, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "aercloud")), 1, 0), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "aercloud")), 1, 1), true new GristSet(new GristType[] {Build, Cobalt}, new int[] {1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "aercloud")), 1, 2), true new GristSet(new GristType[] {Build, Amber}, new int[] {1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "aercloud")), 1, 3), true new GristSet(new GristType[] {Build, Ruby}, new int[] {1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "dungeon_block")), 1, 0), true new GristSet(new GristType[] {Build}, new int[] {4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "dungeon_block")), 1, 1), true new GristSet(new GristType[] {Build, Chalk}, new int[] {4, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "dungeon_block")), 1, 2), true new GristSet(new GristType[] {Build}, new int[] {4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "dungeon_block")), 1, 3), true new GristSet(new GristType[] {Build, Chalk}, new int[] {4, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "dungeon_block")), 1, 4), true new GristSet(new GristType[] {Build}, new int[] {4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "dungeon_block")), 1, 5), true new GristSet(new GristType[] {Build, Chalk}, new int[] {4, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "pillar"))), false new GristSet(new GristType[] {Build}, new int[] {4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "pillar_top"))), false new GristSet(new GristType[] {Build}, new int[] {4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "aerogel"))), false new GristSet(new GristType[] {Tar, Cobalt}, new int[] {16, 4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "berry_bush_stem"))), false new GristSet(new GristType[] {Build, Amber}, new int[] {4, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "white_flower"))), false new GristSet(new GristType[] {Build, Chalk}, new int[] {2, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "purple_flower"))), false new GristSet(new GristType[] {Build, Amethyst}, new int[] {2, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "skyroot_sapling"))), false new GristSet(new GristType[] {Build}, new int[] {16}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "golden_oak_sapling"))), false new GristSet(new GristType[] {Build, Amber}, new int[] {16, 8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "enchanted_gravitite"))), false new GristSet(new GristType[] {Ruby, Garnet, Rust, Amber, Gold}, new int[] {8, 4, 4, 8, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "golden_amber"))), false new GristSet(new GristType[] {Amber}, new int[] {6}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "ambrosium_shard"))), false new GristSet(new GristType[] {Amber, Gold}, new int[] {8, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "aechor_petal"))), false new GristSet(new GristType[] {Shale}, new int[] {6}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "swetty_ball"))), false new GristSet(new GristType[] {Caulk, Cobalt}, new int[] {4, 4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "zanite_gemstone"))), false new GristSet(new GristType[] {Amethyst, Cobalt}, new int[] {8, 4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "ice_ring"))), false new GristSet(new GristType[] {Rust, Build, Cobalt}, new int[] {36, 2, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "ice_pendant"))), false new GristSet(new GristType[] {Rust, Chalk, Build, Cobalt}, new int[] {9, 10, 2, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "moa_egg"))), false new GristSet(new GristType[] {Amber}, new int[] {5}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "gravitite_ore"))), false new GristSet(new GristType[] {Build, Ruby, Garnet, Rust}, new int[] {4, 8*oreMultiplier, 4*oreMultiplier, 4*oreMultiplier}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "zanite_ore"))), false new GristSet(new GristType[] {Build, Amethyst, Cobalt}, new int[] {4, 8*oreMultiplier, 4*oreMultiplier}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "ambrosium_ore"))), false new GristSet(new GristType[] {Build, Amber, Gold}, new int[] {4, 8*oreMultiplier, 2*oreMultiplier}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "blue_berry"))), false new GristSet(new GristType[] {Cobalt, Amber}, new int[] {1, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "enchanted_blueberry"))), false new GristSet(new GristType[] {Cobalt, Amber, Gold}, new int [] {1, 10, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "white_apple"))), false new GristSet(new GristType[] {Amber, Shale, Chalk}, new int [] {2, 2, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("aether_legacy", "healing_stone"))), false new GristSet(new GristType[] {Build, Amber, Gold}, new int [] {2, 8, 2}));
+	    if(MinestuckUniverse.isLostAetherLoaded)
+	    {
+		GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("lost_aether", "crystal_sapling"))), false new GristSet(new gristType[] {Build, Cobalt}, new int[] {16, 4}));
+		GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("lost_aether", "gale_stone"))), false new GristSet(new gristType[] {Build}, new int[] {4}));
+		GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("lost_aether", "light_gale_stone"))), false new GristSet(new gristType[] {Build, Chalk}, new int[] {4, 1}));
+	    }
+	}
+if(MinestuckUniverse.isPVJLoaded)
+	{
+	    //WOOD
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_willow"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_mangrove"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_palm"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_redwood"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_fir"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_pine"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_aspen"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_maple"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_baobab"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_cottonwood"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_juniper"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_cherry_blossom"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "log_jacaranda"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "redwood_bark"))), false new GristSet(new GristType[] {Build}, new int[] {8}));
+	    //LEAVES
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_willow")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_mangrove")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_palm")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_redwood")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_fir")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_pine")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_aspen")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_red_maple")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_orange_maple")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_baobab")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_cottonwood")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_juniper")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_juniper_berried")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_white_cherry_blossom")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_pink_cherry_blossom")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "leaves_jacaranda")), 1, 3), true new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_willow"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    //SAPLINGS
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_mangrove"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_palm"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_redwood"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_fir"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_pine"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_aspen"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_red_maple"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_orange_maple"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_baobab"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_cottonwood"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_juniper"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_juniper_berried"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_white_cherry_blossom"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sapling_pink_cherry_blossom"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_oak"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    //FALLEN LEAVES
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_birch"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_spruce"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_jungle"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_darkoak"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_acacia"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_dead"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_willow"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_mangrove"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_palm"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_redwood"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_fir"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_aspen"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_red_maple"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_orange_maple"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_baobab"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_cottonwood"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_juniper"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_juniper_berried"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_white_cherry_blossom"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_pink_cherry_blossom"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pvjfallenleaves_jacaranda"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    //TWIGS
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "oak_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "birch_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "spruce_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "jungle_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "acacia_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "dark_oak_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "willow_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "mangrove_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "palm_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "redwood_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fir_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pine_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "aspen_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "red_maple_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "orange_maple_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "baobab_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "cottonwood_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "juniper_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "juniper_berried_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "white_cherry_blossom_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pink_cherry_blossom_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "jacaranda_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    //MISCSMALLSTUFF
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "stone_rocks"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "cobblestone_rocks"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "mossy_cobblestone_rocks"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "andesite_rocks"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "granite_rocks"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "diorite_rocks"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sandstone_rocks"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "red_sandstone_rocks"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "bones"))), false new GristSet(new GristType[] {Chalk}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "seashells"))), false new GristSet(new GristType[] {Shale}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pinecones"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "coconut"))), false new GristSet(new GristType[] {Amber, Iodine}, new int[] {1, 2}));
+	    //NOTWOODFULLBLOCKS
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "cracked_sand"))), false new GristSet(new GristType[] {Build}, new int[] {2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "red_cracked_sand"))), false new GristSet(new GristType[] {Build}, new int[] {2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "mud"))), false new GristSet(new GristType[] {Build, Cobalt}, new int[] {2, 4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "adobe"))), false new GristSet(new GristType[] {Build, Shale}, new int[] {1, 6}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "basalt"))), false new GristSet(new GristType[] {Build}, new int[] {2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "limestone"))), false new GristSet(new GristType[] {Build}, new int[] {2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "marble"))), false new GristSet(new GristType[] {Build}, new int[] {2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "siltstone"))), false new GristSet(new GristType[] {Build}, new int[] {2}));
+	    //FOOD
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "clam"))), false new GristSet(new GristType[] {Caulk, Cobalt, Amber}, new int[] {3, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "steamed_clam_meat"))), false new GristSet(new GristType[] {Caulk, Cobalt, Amber, Tar}, new int[] {3, 1, 1, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "raw_squid"))), false new GristSet(new GristType[] {Cobalt, Iodine}, new int[] {1, 8}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "cooked_squid"))), false new GristSet(new GristType[] {Iodine, Tar}, new int[] {8, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "juniper_berries"))), false new GristSet(new GristType[] {Shale, Iodine}, new int[] {1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "raw_duck"))), false new GristSet(new GristType[] {Iodine}, new int[] {10}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "cooked_duck"))), false new GristSet(new GristType[] {Tar, Iodine}, new int[] {1, 10}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "mystical_rabbit"))), false new GristSet(new GristType[] {Iodine, Uranium}, new int[] {8, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "mystical_porkchop"))), false new GristSet(new GristType[] {Iodine, Uranium}, new int[] {10, 4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "mystical_beef"))), false new GristSet(new GristType[] {Iodine, Uranium}, new int[] {12, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "mystical_chicken"))), false new GristSet(new GristType[] {Iodine, Uranium}, new int[] {10, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "mystical_mutton"))), false new GristSet(new GristType[] {Iodine, Uranium}, new int[] {10, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "mystical_cod"))), false new GristSet(new GristType[] {Amber, Caulk, Cobalt, Uranium}, new int[] {4, 4, 2, 1));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "mystical_potato"))), false new GristSet(new GristType[] {Amber, Uranium}, new int[] {4, 1}));
+	    //DROPS
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "spectral_wrappings"))), false new GristSet(new GristType[] {Chalk, Iodine}, new int[] {2, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "goon_bile"))), false new GristSet(new GristType[] {Iodine}, new int[] {2}));
+	    //LEAFYSTUFF
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "short_grass"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "frost_lotus"))), false new GristSet(new GristType[] {Build, Cobalt}, new int[] {1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "silverleaf"))), false new GristSet(new GristType[] {Build, Mercury}, new int[] {1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "chickweed"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "clovers"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "crabgrass"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "bracket_fungus"))), false new GristSet(new GristType[] {Iodine}, new int[] {4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "flouropore"))), false new GristSet(new GristType[] {Iodine, Quartz}, new int[] {4, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "frogbit"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "duckweed"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "waxcap"))), false new GristSet(new GristType[] {Iodine, Build}, new int[] {3, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "orange_mushroom"))), false new GristSet(new GristType[] {Iodine, Amber}, new int[] {2, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "death_cap"))), false new GristSet(new GristType[] {Iodine, Sulfur}, new int[] {3, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "cattail"))), false new GristSet(new GristType[] {Build}, new int[] {2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "beach_grass"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sea_oats"))), false new GristSet(new GristType[] {Build}, new int[] {2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sundew"))), false new GristSet(new GristType[] {Amber, Ruby}, new int[] {2, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "small_cactus"))), false new GristSet(new GristType[] {Amber}, new int[] {2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "void_grass"))), false new GristSet(new GristType[] {Amethyst, Shale}, new int[] {2, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "blood_nettle"))), false new GristSet(new GristType[] {Garnet Iodine}, new int[] {1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "glowcap"))), false new GristSet(new GristType[] {Chalk, Tar}, new int[] {2, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "witherweed"))), false new GristSet(new GristType[] {Tar}, new int[] {4}));
+	    //BOPSTUFF
+	    if(MinestuckUniverse.isBOPLoaded)
+	        {
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_yellow_autumn"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_orange_autumn"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_bamboo"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_magic"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_umbran"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_dead"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+    		GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_fir"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_ethereal"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_origin"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_pink_cherry"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_white_cherry"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_maple"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_hellbark"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_flowering"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_jacaranda"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_sacred_oak"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_mangrove"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_palm"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_redwood"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_willow"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_pine"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_mahogany"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_ebony"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_eucalyptus"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_red_big_flower"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fallenleaves_bop_yellow_big_flower"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "yellow_autumn_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "orange_autumn_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "bamboo_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "magic_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "umbran_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "dead_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "fir_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "ethereal_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "origin_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pink_cherry_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	    	GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "white_cherry_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "maple_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "hellbark_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "flowering_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "jacaranda_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "sacred_oak_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "mangrove_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "palm_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "redwood_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "willow_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "pine_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "mahogany_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "ebony_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "eucalyptus_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "red_big_flower_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+		    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("pvj", "yellow_big_flower_bop_twigs"))), false new GristSet(new GristType[] {Build}, new int[] {1}));
+	        }
+                if(MinestuckUniverse.isNetherExLoaded)
+	{
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "gloomy_netherrack"))), false new GristSet(new GristType[] {Build, Caulk, Sulfur}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "lively_netherrack"))), false new GristSet(new GristType[] {Build, Iodine, Amber}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "fiery_netherrack"))), false new GristSet(new GristType[] {Build, Tar, Sulfur,}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "icy_netherrack"))), false new GristSet(new GristType[] {Build, Cobalt, Shale}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "netherrack_path"))), false new GristSet(new GristType[] {Build, Tar}, new int[] {2, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "gloomy_netherrack_path"))), false new GristSet(new GristType[] {Build, Caulk, Sulfur}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "lively_netherrack_path"))), false new GristSet(new GristType[] {Build, Iodine, Amber}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "fiery_netherrack_path"))), false new GristSet(new GristType[] {Build, Tar, Sulfur,}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "icy_netherrack_path"))), false new GristSet(new GristType[] {Build, Cobalt, Shale}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "hyphae"))), false new GristSet(new GristType[] {Build, Iodine, Amber}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "basalt"))), false new GristSet(new GristType[] {Build, Tar}, new int[] {2, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "frostburn_ice"))), false new GristSet(new GristType[] {Cobalt, Shale}, new int[] {2, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "elder_mushroom_stem"))), false new GristSet(new GristType[] {Iodine}, new int[] {5}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "red_elder_mushroom_cap"))), false new GristSet(new GristType[] {Iodine, Garnet}, new int[] {5, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "brown_elder_mushroom_cap"))), false new GristSet(new GristType[] {Iodine, Sulfur}, new int[] {5, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "enoki_mushroom"))), false new GristSet(new GristType[] {Iodine, Amber}, new int[] {5, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "brown_elder_mushroom"))), false new GristSet(new GristType[] {Iodine, Sulfur}, new int[] {5, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "red_elder_mushroom"))), false new GristSet(new GristType[] {Iodine, Garnet}, new int[] {5, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "gloomy_netherbrick"))), false new GristSet(new GristType[] {Build, Caulk, Sulfur}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "lively_netherbrick"))), false new GristSet(new GristType[] {Build, Iodine, Amber}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "fiery_netherbrick"))), false new GristSet(new GristType[] {Build, Tar, Sulfur,}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "icy_netherbrick"))), false new GristSet(new GristType[] {Build, Cobalt, Shale}, new int[] {2, 1, 1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "frost_rod"))), false new GristSet(new GristType[] {Cobalt}, new int[] {20}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "rime_crystal"))), false new GristSet(new GristType[] {Cobalt, Shale}, new int[] {4, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "rime_crystal"))), false new GristSet(new GristType[] {Build, Cobalt, Shale}, new int[] {2, 4*oreMultiplier, 2*oreMultiplier}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "wither_bone"))), false new GristSet(new GristType[] {Tar, Diamond}, new int[] {8, 2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "orange_salamander_hide"))), false new GristSet(new GristType[] {Sulfur, Iodine}, new int[] {3, 3}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "black_salamander_hide"))), false new GristSet(new GristType[] {Tar, Iodine}, new int[] {3, 3}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "thronstalk"))), false new GristSet(new GristType[] {Build}, new int[] {2}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "ghast_meat_raw"))), false new GristSet(new GristType[] {Iodine}, new int[] {12}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("netherex", "ghast_meat_cooked"))), false new GristSet(new GristType[] {Iodine, Tar}, new int[] {12, 1}));
+	}
+	
+	if(MinestuckUniverse.isMCALoaded)
+	{
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mca", "rose_gold_ingot"))), false new GristSet(new GristType[] {Cobalt, Rust, Gold}, new int[] {1, 8, 4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mca", "rose_gold_ore"))), false new GristSet(new GristType[] {Build, Cobalt, Rust, Gold}, new int[] {2, 1*oreMultiplier, 8*oreMultiplier, 4*oreMultiplier}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mca", "rose_gold_dust"))), false new GristSet(new GristType[] {Cobalt, Rust, Gold}, new int[] {1, 8, 4}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mca", "gold_dust"))), false new GristSet(new GristType[] {Gold}, new int[] {1}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mca", "book_infection"))), false new GristSet(new GristType[] {Amber, Chalk, Iodine}, new int[] {9, 3, 9}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mca", "book_rose_gold"))), false new GristSet(new GristType[] {Amber, Chalk, Iodine}, new int[] {9, 3, 9}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mca", "book_family"))), false new GristSet(new GristType[] {Amber, Chalk, Iodine}, new int[] {9, 3, 9}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mca", "book_romance"))), false new GristSet(new GristType[] {Amber, Chalk, Iodine}, new int[] {9, 3, 9}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mca", "book_death"))), false new GristSet(new GristType[] {Amber, Chalk, Iodine}, new int[] {9, 3, 9}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mca", "staff_of_life"))), false new GristSet(new GristType[] {Build, Diamond, Gold, Uranium, Ruby, Amethyst, Cobalt}, new int[] {2000, 50, 150, 150, 200, 200, 200}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mca", "baby_boy"))), false new GristSet(new GristType[] {Build, Chalk, Iodine, Gold, Amber}, new int[] {350, 50, 25, 25, 10}));
+	    GristRegistry.addGristConversion(new Itemstack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("mca", "baby_girl"))), false new GristSet(new GristType[] {Build, Chalk, Iodine, Gold, Amber}, new int[] {350, 50, 25, 25, 10}));
+	    
+	}
+	
+        }
         if(MinestuckUniverse.isCyclicLoaded)
         {
             GristRegistry.addGristConversion(new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("cyclicmagic", "crystalized_amber"))), false, new GristSet(new GristType[] {Amber}, new int[] {20}));
