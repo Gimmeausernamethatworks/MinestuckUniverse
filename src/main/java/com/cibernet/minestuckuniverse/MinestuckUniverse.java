@@ -51,6 +51,11 @@ public class MinestuckUniverse
     public static boolean isLocksLoaded;
     public static boolean isTrophySlotsLoaded;
     public static boolean isCyberwareLoaded;
+    public static boolean isAetherLoaded;
+    public static boolean isLostAetherLoaded;
+    public static boolean isPVJLoaded;
+    public static boolean isNetherExLoaded;
+    public static boolean isMCALoaded;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -73,6 +78,11 @@ public class MinestuckUniverse
         isLocksLoaded = Loader.isModLoaded("locks");
         isTrophySlotsLoaded = Loader.isModLoaded("trophyslots");
         isCyberwareLoaded = Loader.isModLoaded("cyberware");
+        isAetherLoaded = Loader.isModLoaded("aether_legacy");
+	isLostAetherLoaded = Loader.isModLoaded("lost_aether");
+	isPVJLoaded = Loader.isModLoaded("pvj");
+	isNetherExLoaded = Loader.isModLoaded("netherex");
+	isMCALoaded = Loader.isModLoaded("mca");
 
         proxy.preInit();
     }
